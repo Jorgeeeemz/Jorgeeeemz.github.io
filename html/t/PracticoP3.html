@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Examen Practico 3</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Jorge Alejandro Cabrera Meza">
+        
+    <style>
+        .Tit{ background-color: black; color: aqua;}
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-y6fn{background-color:#c0c0c0;text-align:left;vertical-align:top}
+        .tg .tg-6qw1{background-color:#c0c0c0;text-align:center;vertical-align:top}
+        .tg .tg-j6lv{background-color:#96fffb;text-align:center;vertical-align:top}
+        .tg .tg-k3lo{background-color:#34ff34;text-align:center;vertical-align:top}
+        .tg .tg-jdmv{background-color:#00d2cb;text-align:center;vertical-align:top}
+    </style>
+    <body>
+        <center><h1 class="Tit">~~JavaScript Calculator~~</h1></center>
+        <center><table class="tg" border="2">
+            <thead>
+              <tr>
+                <th class="tg-y6fn"></th>
+                <th class="tg-6qw1"></th>
+                <th class="tg-6qw1"></th>
+                <th class="tg-6qw1"></th>
+                <th class="tg-6qw1"></th>
+                <th class="tg-6qw1"></th>
+                <th class="tg-6qw1"></th>
+                <th class="tg-6qw1"></th>
+                <th class="tg-y6fn"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-j6lv" colspan="7" ><input type="text" id="Resultado" readonly></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-k3lo"> <button onclick="Numero('1')">1</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Numero('2')">2</button ></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Numero('3')">3</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Operacion('+')">+</button><br></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-k3lo"> <button onclick="Numero('4')">4</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"> <button onclick="Numero('5')">5</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Numero('6')">6</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Operacion('-')">-</button></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-k3lo"><button onclick="Numero('7')">7</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Numero('8')">8</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Numero('9')">9</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Operacion('*')">*</button></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-k3lo"><button onclick="Numero('0')">0</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Numero('.')">.</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Calcular()">=</button></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-k3lo"><button onclick="Operacion('/')">/</button></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-jdmv" colspan="7"><button onclick="Borrar()">Clear All</button></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+              <tr>
+                <td class="tg-y6fn"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-6qw1"></td>
+                <td class="tg-y6fn"></td>
+              </tr>
+            </tbody>
+            </table></center>
+
+        <script>
+            function Numero(Numero) {
+                document.getElementById('Resultado').value += Numero;
+            }
+
+            function Operacion(Operacion) {
+                document.getElementById('Resultado').value += Operacion;
+            }
+            function Borrar() {
+                document.getElementById('Resultado').value =";
+            }
+            function Resultado() {
+            var resultado = eval(document.getElementById('Resultado').value);
+            document.getElementById('Resultado').value = resultado;
+        }
+        </script>
+    </body>
+    </head>
+</html>
